@@ -1,0 +1,816 @@
+/* import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ubuntu&display-swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+@import url('../css/fonts.css');
+
+
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+:root{
+
+    /*      Theme colors        */
+    --text-gray: #3f4954;
+    --text-light : #686666da;
+    --bg-color: #0f0f0f;
+    --white: #ffffff;
+    --midnight: #104f55;
+
+    /* gradient color   */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+    /*      theme font-family   */
+    --Abel: 'Abel', cursive;
+    --Anton: 'Anton', cursive;
+    --Josefin : 'Josefin', cursive;
+    --Lexend: 'Lexend', cursive;
+    --Livvic : 'Livvic', cursive;
+}
+
+
+/* ---------------- Global Classes ---------------*/
+.all-main-headings{
+    font-family: 'Berkshire Swash', cursive;
+    color: black;
+    font-size: 33px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type: none;
+}
+
+/* h1{
+    font-size: 2.5rem;
+} */
+
+h2{
+    font-family: 'Philosopher', sans-serif;
+
+}
+
+h3{
+     font-family: 'Philosopher', sans-serif;
+    font-size: 1.3rem;
+}
+
+button.btn{
+    border: none;
+    border-radius: 25px;
+    padding: 10px 17px;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor: pointer;
+}
+
+span{
+    font-family: 'Philosopher', sans-serif;
+}
+
+.container{
+    margin: 0 5vw;
+}
+
+.text-gray{
+    color: rgb(20, 20, 20);
+}
+
+p{
+    font-family: 'Philosopher', sans-serif;
+    color: var(--text-light);
+    text-align: justify;
+} 
+
+/* ------x------- Global Classes -------x-------*/
+
+/* --------------- navbar ----------------- */
+
+.nav{
+    background: #000000b6 url("../img/lib.jpg") ;
+    background-size: cover;
+    background-blend-mode: darken;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+.nav .nav-menu{    
+    justify-content: space-between;
+}
+
+.nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+    
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: white;
+}
+
+.collapse{
+    height: 34rem;
+}
+
+.nav .nav-items{
+    display: flex;
+    margin: 0;
+    font-family: 'Philosopher', sans-serif;
+    margin-left: -30%;
+}
+@media(max-width:1280px){
+    .nav .nav-items{
+        display: flex;
+        margin: 0;
+        margin-left: 0%;
+    }
+}
+.nav .nav-items a{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1.1rem;
+}
+.nav .nav-items .nav-link::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #16bdff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav .nav-items .nav-link:hover::after{
+    width: 100%;
+}
+
+.nav .nav-items .nav-link:hover a{
+    color: var(--white);
+}
+
+.my-logo a{
+    color: #fff;
+    font-size: 28px;
+    font-weight: 500;
+}
+.my-logo a span{
+    color: rgb(0, 213, 228);
+    
+}
+
+.nav .nav-brand{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: flex;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 1.6rem;
+}
+.nav .nav-brand .logo-text-first{
+    color: white;
+}
+
+.nav .social{
+    padding: 1.4rem 0
+}
+.nav .social a{
+    color: white;
+}
+
+.nav .social i{
+    padding: 0 .2rem;
+}
+
+.nav .social .fa-facebook-f:hover{
+    color: #0026ff;
+}
+.nav .social .fa-instagram:hover{
+    color: #ff0ad6;
+}
+.nav .social .fa-youtube:hover{
+    color: #db0000;
+}
+.nav .social .fa-twitter:hover{
+    color: #00c3ff;
+}
+
+/* -------x------- navbar ---------x------- */
+
+
+/* ----------------- Main Content----------- */
+main .site-title{
+    background: rgba(0, 0, 0, 0.7) url('../img/lib.jpg');
+    background-size: cover;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+    height: 33vh;
+    display: flex;
+    justify-content: center;
+}
+
+main .site-title .site-background{
+    
+    text-align: center;
+    color: var(--white);
+}
+
+
+
+.website-heading span{
+    font-family: 'Berkshire Swash', cursive;
+    color: #00c3ff;
+}
+.website-heading{
+    font-family: 'Berkshire Swash', cursive;
+    /* font-family: 'Cinzel Decorative', cursive; */
+    color: white;
+    font-size: 48px;
+}
+.website-heading-para{
+    width: 80%;
+    color: white;
+    text-align: center;
+    padding: 0px 130px;
+    margin-top: -25px;
+}
+@media(max-width:1100px){
+    .website-heading-para{
+        padding: 0px 110px;
+    }
+}
+@media(max-width:1000px){
+    .website-heading-para{
+        padding: 0px 90px;
+    }
+}
+@media(max-width:803px){
+    .website-heading-para{
+        padding: 0px 80px;
+    }
+    .website-heading{
+        font-size: 44px;
+    }
+    .greeting-text{
+        display: none;
+    }
+}
+@media(max-width:700px){
+    .website-heading-para{
+        padding: 0px 70px;
+        font-size: 18px;
+    }
+    .website-heading{
+        font-size: 44px;
+    }
+}
+@media(max-width:558px){
+    .website-heading-para{
+        padding: 0px 57px;
+        font-size: 18px;
+    }
+    .website-heading{
+        font-size: 41px;
+    }
+}
+@media(max-width:470px){
+    .website-heading-para{
+        padding: 0px 40px;
+    }
+    .website-heading{
+        font-size: 34px;
+    }
+    .website-sub-heading {
+        font-size: 20px;
+    }
+}
+
+
+  /* ----------------- Footer --------------------- */
+
+footer.footer{
+    height: 100%;
+    background: rgb(32, 31, 31);
+    position: relative;
+}
+
+footer .know-me{
+    width: 100%;
+    font-size: 16px;
+    padding: 25px 12px 6px;
+    color: rgb(158, 158, 158);
+    text-align: center;
+    font-family: 'Philosopher', sans-serif;
+}
+footer .know-me .get-in-touch{
+    font-size: 20px;
+    font-family: 'Berkshire Swash', cursive;
+}
+footer .details{
+    font-family: 'Philosopher', sans-serif;
+    margin: 5px;
+}
+footer .details .fas{
+    color: rgb(230, 223, 223);
+}
+footer.footer .footer-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer.footer .footer-container > div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 1.1rem .5rem;
+}
+
+footer.footer .footer-container h2{
+    color: var(--white);
+}
+
+footer .footer-container .ft-pages{
+    text-align: center;
+}
+footer .footer-container .ft-pages a{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    margin: 2px;
+}
+footer .footer-container .ft-pages a:hover{
+    color: #13ebff;
+    text-transform: uppercase;
+}
+
+footer.footer .instagram div > img{
+    display: inline-block;
+    width: 25%;
+    height: 50%;
+    margin: .3rem .4rem;
+}
+
+footer.footer .follow div i{
+    color: var(--white);
+    padding: 0 .4rem;
+}
+
+footer.footer .rights{
+    justify-content: center;
+    font-family: 'Philosopher', sans-serif;
+}
+
+footer.footer .rights h4 a{
+    color: #00c3ff;
+}
+
+footer.footer .move-up{
+    position: absolute;
+    right: 6%;
+    top: 50%;
+    font-size: 30px;
+}
+
+footer.footer .move-up span{
+    color: var(--midnight);
+}
+
+footer.footer .move-up span:hover{
+    color: var(--white);
+    cursor: pointer;
+}
+footer .ft-social{
+    color: white;
+}
+footer .copyright{
+    color: white;
+    margin-top: 50px;
+}
+footer .copyright a:hover{
+    color: crimson;
+    text-decoration: underline;
+}
+footer .me-cp{
+    color: #13ebff;
+}
+footer .contact-email{
+    color: #13ebff;
+    font-size: 16px;
+    text-align: center;
+}
+footer .contact-email i{
+    color: white;
+}
+
+
+/* about */
+/* skills section styling */
+.about .about-content,
+.skills .skills-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills-title{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 45px;
+}
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+.skills .skills-content .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .left p{
+    text-align: justify;
+}
+.skills .skills-content .left a{
+    display: inline-block;
+    background: #00c3ff;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #00c3ff;
+    transition: all 0.3s ease;
+}
+.skills .skills-content .left a:hover{
+    color: #00c3ff;
+    background: none;
+}
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+.skills .skills-content .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #00c3ff;
+}
+.skills-content .right .html::before{
+    width: 90%;
+}
+.skills-content .right .css::before{
+    width: 80%;
+}
+.skills-content .right .js::before{
+    width: 60%;
+}
+
+.skills-content .right .graphic::before{
+    width: 80%;
+}
+.skills-content .right .php::before{
+    width: 70%;
+}
+.skills-content .right .Photoshop::before{
+    width: 85%;
+}
+
+.about-me-text{
+    font-family: 'Philosopher', sans-serif;
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-content .right{
+    width: 55%;
+    /* margin-top: -50px; */
+}
+.about .about-content .right .text{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    color: #00c3ff;
+}
+.typing-2{
+    font-size: 20px;
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+.about .about-content .right a{
+    display: inline-block;
+    background: #00c3ff;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 9px 8px;
+    margin-top: -2px;
+    border-radius: 10px;
+    border: 2px solid #00c3ff;
+    transition: all 0.3s ease;
+}
+.about .about-content .right a:hover{
+    color: #00c3ff;
+    background: none;
+    text-transform: uppercase;
+}
+.max-width{
+    max-width: 90%;
+    padding: 10px 40px;
+    margin: auto;
+}
+}
+.about .about-content,
+.skills .skills-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.text-content-website{
+    padding: 15px 72px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 947px){
+    .max-width{
+        max-width: 930px;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .services .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills .skills-content .column,
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+/* about */
+
+/* ---------x------- Footer ----------x---------- */
+
+/*              Viewport less then or equal to 1130px            */
+
+@media only screen and (max-width: 1130px){
+    .site-content .post-content > .post-image .post-info{
+        left: 2rem !important;
+        bottom: 1.2rem !important;
+        border-radius: 0% !important;
+    }
+
+    .site-content .sidebar .popular-post .post-info{
+        display: none !important;
+    }
+
+    footer.footer .footer-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/*      x       Viewport less then or equal to 1130px    x     */
+/*              Viewport less then or equal to 750px            */
+
+@media only screen and (max-width: 972px){
+    .nav .nav-menu, .nav .nav-items{
+        flex-direction: column;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .nav .toggle-collapse{
+        display: initial;
+    }
+
+    .fa-facebook-f:before {
+        content: "\f39e";
+        background: rgb(0, 89, 255);
+        padding: 10px;
+        border-radius: 50%;
+    }
+
+    .fa-instagram:before {
+        content: "\f16d";
+        background: rgb(241, 34, 155);
+        padding: 10px;
+        border-radius: 50%;
+    }
+
+    .fa-twitter:before {
+        content: "\f099";
+        background: rgb(0, 217, 255);
+        padding: 10px;
+        border-radius: 50%;
+    }
+
+    .fa-youtube:before {
+        content: "\f167";
+        background: red;
+        padding: 10px;
+        border-radius: 50%;
+    }
+
+    .nav .nav-items a {
+        font-size: 29px;
+    }   
+}
+
+@media only screen and (max-width: 840px){
+    .container{
+        max-width: 700px;
+    }
+}
+
+@media only screen and (max-width:918px){
+    .about .about-content, .skills .skills-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    main .site-content{
+        grid-template-columns: 100%;
+    }
+
+    footer.footer .footer-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .container {
+        max-width: 659px;
+        background: #fff;
+        width: 695px;
+    }
+}
+
+@media only screen and (max-width: 680px){
+    .container{
+    max-width: 610px;
+    }
+}
+@media only screen and (max-width: 640px){
+    .container{
+    max-width: 580px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .container{
+    max-width: 520px;
+    }
+}
+
+/*              Viewport less then or equal to 520px            */
+
+@media only screen and (max-width: 520px){
+    main .blog{
+        height: 125vh;
+    }
+
+    .site-content .post-content > .post-image .post-info{
+        display: none;
+    }
+
+    footer.footer .footer-container > div{
+        padding:  0.4rem .9rem !important;
+    }
+
+    footer .rights{
+        padding: 0 0.4rem;
+        text-align: center;
+    }
+
+    nav .toggle-collapse{
+        width: 80% !important;
+    }
+    .container {
+        max-width: 445px;
+        width: 445px;
+        padding: 50px 32px 130px 16px;
+    }   
+    .container form {
+        padding: 0px 0px 5px 0px;
+        max-width: 116%;
+    }
+
+}
+
+
+@media only screen and (max-width: 480px){
+    .container {
+        max-width: 420px;
+        width: 411px;
+        padding: 43px 20px 124px 7px;
+    }    
+}
+
+@media only screen and (max-width: 433px){
+    .container {
+        max-width: 349px;
+    }    
+
+    main .site-title{
+        height: 35vh;
+    }
+}
+@media only screen and (max-width: 360px){
+    .container {
+        max-width: 306px;
+    }   
+    
+    main .site-title{
+        height: 40vh;
+    }
+}
+
+
+
+
+
+
+
+
